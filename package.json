@@ -1,8 +1,8 @@
 {
-  "name": "playwright-google-test",
+  "name": "playwright-login-test",
   "version": "1.0.0",
   "scripts": {
-    "test": "npx playwright test"
+    "test": "npx playwright test --reporter=html"
   },
   "devDependencies": {
     "@playwright/test": "^1.55.0"
