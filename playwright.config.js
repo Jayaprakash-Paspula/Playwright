@@ -2,11 +2,13 @@
 module.exports = {
   testDir: "./tests",
   retries: 1,
-  reporter: [["html", { outputFolder: "playwright-report" }]],
+  reporter: [["html", { outputFolder: "playwright-report", open: "never" }]],
   use: {
     headless: true,
     screenshot: "only-on-failure",
-    video: "retain-on-failure"
+    video: "retain-on-failure",
+    navigationTimeout: 30000,
+    actionTimeout: 15000
   },
   projects: [
     { name: 'Chromium', use: { browserName: 'chromium' } },
